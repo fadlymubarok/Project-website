@@ -1,0 +1,471 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "Hind", sans-serif;
+}
+
+.judul {
+  display: flex;
+  max-width: 100%;
+  background-color: #71efa3;
+  color: white;
+}
+
+.judul img {
+  width: 150px;
+  height: 110px;
+  margin: 10px -10px 20px 0px;
+}
+
+.judul h1 {
+  margin-top: 40px;
+  font-size: 2.2em;
+}
+
+nav {
+  position: absolute;
+  top: 35px;
+  right: 45px;
+  width: 500px;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 35px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  transition: all 1s ease;
+  color: white;
+  padding: 15px;
+}
+
+nav ul li .dropdown {
+  display: none;
+}
+
+nav ul li a:hover {
+  padding: 15px;
+  background-color: #4ab875;
+  border-radius: 45px;
+}
+
+nav ul li:hover .dropdown {
+  display: block;
+  padding: 15px;
+  position: absolute;
+  background-color: #71efa3;
+  border-radius: 10px;
+}
+
+nav ul li .dropdown li {
+  display: block;
+  margin: 20px 0 30px 0;
+  width: 170px;
+}
+
+.slide-img {
+  width: 800px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -30px;
+}
+
+.slider {
+  width: 700px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 300px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 800px;
+  height: 300px;
+}
+
+.navigation-manual {
+  position: absolute;
+  width: 660px;
+  display: flex;
+  top: 660px;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 20px;
+}
+
+.manual-btn:hover {
+  background-color: black;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 660px;
+  top: 660px;
+  justify-content: center;
+}
+
+.navigation-auto div {
+  border: 2px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 20px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background-color: black;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background-color: black;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background-color: black;
+}
+
+main {
+  max-width: 90%;
+  margin: 40px auto;
+}
+
+#geografis,
+#sejarah {
+  padding: 25px;
+  margin: 40px 0px;
+  width: 70%;
+  transition: all 1s ease;
+  border: 1px solid rgb(177, 177, 177);
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0px;
+  border: 1px solid rgb(177, 177, 177);
+  transition: all 1s ease;
+}
+
+.card:hover,
+aside:hover {
+  transform: scale(1.05, 1.1);
+  box-shadow: 3px 3px 10px rgb(177, 177, 177);
+}
+
+#img {
+  width: 700px;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.img {
+  width: 320px;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.item-left {
+  width: 60%;
+  margin-left: 20px;
+  margin-right: 3px;
+}
+
+.item-right {
+  order: 1;
+  width: 60%;
+  margin-right: 3px;
+}
+
+.judul-item {
+  text-align: right;
+  margin-right: 30px;
+}
+
+.judul-item h5,
+.item-left h5 {
+  margin-bottom: -15px;
+}
+
+aside {
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+  position: absolute;
+  top: 400px;
+  right: 60px;
+  border: 1px solid rgb(177, 177, 177);
+  transition: all 1s ease;
+}
+
+aside p {
+  margin-top: -30px;
+}
+aside h6 {
+  margin-top: 5px;
+  font-size: 1em;
+}
+
+aside img {
+  width: 180px;
+  height: 240px;
+}
+
+footer {
+  background-color: #cdcdcd;
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+}
+
+footer p {
+  margin-left: 10px;
+}
+/* responsive */
+
+@media screen and (max-width: 1024px) {
+  .judul {
+    display: block;
+    text-align: center;
+    margin-bottom: -27px;
+  }
+
+  .judul img {
+    margin-bottom: -30px;
+  }
+
+  .judul h1 {
+    padding-bottom: 25px;
+  }
+
+  nav {
+    width: 100%;
+    padding: 10px;
+    position: static;
+    text-align: center;
+    background-color: #acffad;
+  }
+
+  nav ul {
+    margin-left: -90px;
+  }
+
+  nav ul li {
+    font-size: 1.2em;
+  }
+
+  nav ul li .dropdown li {
+    font-size: 0.8em;
+    width: 160px;
+  }
+
+  .slide-img {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3px;
+  }
+
+  .navigation-manual {
+    position: absolute;
+    width: 700px;
+    display: flex;
+    top: 740px;
+    justify-content: center;
+  }
+
+  .navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 700px;
+    top: 740px;
+    justify-content: center;
+  }
+
+  .slide {
+    width: 20%;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 250px;
+  }
+
+  .img {
+    width: 100%;
+  }
+
+  .card {
+    display: block;
+  }
+
+  #img {
+    width: 100%;
+    margin-left: 0;
+  }
+  .img {
+    width: 90%;
+    margin-left: 35px;
+    margin-bottom: 20px;
+  }
+
+  .item-right,
+  .item-left {
+    width: 95%;
+    margin-left: 20px;
+    font-size: 0.9em;
+  }
+
+  .judul-item {
+    text-align: left;
+  }
+  .judul-item h5,
+  .item-left h5 {
+    padding-top: 10px;
+  }
+
+  #sejarah,
+  #geografis {
+    width: 100%;
+  }
+
+  aside {
+    position: static;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  aside h6 {
+    font-size: 0.8em;
+  }
+
+  aside p {
+    font-size: 0.8em;
+  }
+
+  aside img {
+    width: 150px;
+    height: 200px;
+  }
+
+  .card:hover,
+  aside:hover {
+    transform: scale(1, 1);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .judul {
+    font-size: 0.8em;
+  }
+
+  .judul img {
+    width: 120px;
+    height: 100px;
+  }
+
+  nav {
+    width: 100%;
+    padding: 5px;
+    position: static;
+    text-align: center;
+    background-color: #acffad;
+  }
+
+  nav ul {
+    margin-left: -50px;
+  }
+
+  nav ul li {
+    font-size: 1em;
+    margin-left: 0px;
+  }
+
+  .slide-img {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navigation-manual {
+    position: absolute;
+    width: 400px;
+    display: flex;
+    top: 700px;
+    justify-content: center;
+  }
+
+  .navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 400px;
+    top: 700px;
+    justify-content: center;
+  }
+
+  .slide {
+    width: 20%;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 250px;
+  }
+
+  .img {
+    margin-left: 25px;
+  }
+}
